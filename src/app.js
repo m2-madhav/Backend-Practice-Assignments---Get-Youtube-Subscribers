@@ -21,5 +21,17 @@ app.get("/subscribers/:id", (req, res) => {
     .catch((err) => res.status(400).send({ message: err.message }));
   return;
 });
+/*
+app.get('/subscribers/:id',async(req,res)=>{
+    const id = req.params.id;
+    try{
+    const subscriber = await Subscriber.findById(id);
+    console.log(subscriber);
+    res.send(subscriber);
+    }catch(err){
+        res.status(400).send({message:err.message});
+    }
+  });
+*/
 
 module.exports = app;
